@@ -52,10 +52,10 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = text=event.message.text
-    if re.match('告訴我秘密',message):
+    if re.match('選單',message):
         # Flex Message Simulator網頁：https://developers.line.biz/console/fx/
         flex_message = FlexSendMessage(
-            alt_text='行銷搬進大程式',
+            alt_text='賴衣櫥',
             contents={
   "type": "carousel",
   "contents": [
@@ -67,7 +67,7 @@ def handle_message(event):
         "contents": [
           {
             "type": "image",
-            "url": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/279692148_2169391236552052_7954349930391614091_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=MXg7U56SI54AX922yyg&_nc_ht=scontent.ftpe7-1.fna&oh=00_AT9PyIHqXUNZqV5MxZ9jvVDG2iTLaCneF7vnksHMEfSFcA&oe=63500F41",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip2.jpg",
             "size": "full",
             "aspectMode": "cover",
             "aspectRatio": "2:3",
@@ -83,7 +83,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "大壯",
+                    "text": "Your closet",
                     "size": "xl",
                     "color": "#ffffff",
                     "weight": "bold"
@@ -105,9 +105,14 @@ def handle_message(event):
                         "type": "filler"
                       },
                       {
+                        "type": "icon",
+                        "url": "https://cdn-icons-png.flaticon.com/512/114/114829.png",
+                        "size": "lg"
+                      },
+                      {
                         "type": "text",
-                        "text": "Link",
-                        "color": "#ffffff",
+                        "text": "Go",
+                        "color": "#000000",
                         "flex": 0,
                         "offsetTop": "-2px"
                       },
@@ -126,120 +131,7 @@ def handle_message(event):
                 "spacing": "sm",
                 "borderColor": "#ffffff",
                 "margin": "xxl",
-                "height": "40px",
-                "action": {
-                  "type": "uri",
-                  "label": "action",
-                  "uri": "https://www.facebook.com/edward.wang.102977"
-                }
-              }
-            ],
-            "position": "absolute",
-            "offsetBottom": "0px",
-            "offsetStart": "0px",
-            "offsetEnd": "0px",
-            "backgroundColor": "#03303Acc",
-            "paddingAll": "20px",
-            "paddingTop": "18px"
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "text",
-                "text": "SALE",
-                "color": "#ffffff",
-                "align": "center",
-                "size": "xs",
-                "offsetTop": "3px"
-              }
-            ],
-            "position": "absolute",
-            "cornerRadius": "20px",
-            "offsetTop": "18px",
-            "backgroundColor": "#ff334b",
-            "offsetStart": "18px",
-            "height": "25px",
-            "width": "53px"
-          }
-        ],
-        "paddingAll": "0px"
-      }
-    },
-    {
-      "type": "bubble",
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "image",
-            "url": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-1/278495391_5922963721051174_5985548170188560574_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=7206a8&_nc_ohc=qq3_KgfItZsAX_FAAUP&tn=UYI8JHISbKfq_H7N&_nc_ht=scontent.ftpe7-1.fna&oh=00_AT9clinYNGkoP12olcEAXo468vdnaPqHDtN5ufuEyLAZLw&oe=634F98E9",
-            "size": "full",
-            "aspectMode": "cover",
-            "aspectRatio": "2:3",
-            "gravity": "top"
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "小帥",
-                    "size": "xl",
-                    "color": "#ffffff",
-                    "weight": "bold"
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                  {
-                    "type": "filler"
-                  },
-                  {
-                    "type": "box",
-                    "layout": "baseline",
-                    "contents": [
-                      {
-                        "type": "filler"
-                      },
-                      {
-                        "type": "text",
-                        "text": "Link",
-                        "color": "#ffffff",
-                        "flex": 0,
-                        "offsetTop": "-2px"
-                      },
-                      {
-                        "type": "filler"
-                      }
-                    ],
-                    "spacing": "sm"
-                  },
-                  {
-                    "type": "filler"
-                  }
-                ],
-                "borderWidth": "1px",
-                "cornerRadius": "4px",
-                "spacing": "sm",
-                "borderColor": "#ffffff",
-                "margin": "xxl",
-                "height": "40px",
-                "action": {
-                  "type": "uri",
-                  "label": "action",
-                  "uri": "https://www.facebook.com/bijiu.liao"
-                }
+                "height": "40px"
               }
             ],
             "position": "absolute",
@@ -249,27 +141,6 @@ def handle_message(event):
             "backgroundColor": "#9C8E7Ecc",
             "paddingAll": "20px",
             "paddingTop": "18px"
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "text",
-                "text": "SALE",
-                "color": "#ffffff",
-                "align": "center",
-                "size": "xs",
-                "offsetTop": "3px"
-              }
-            ],
-            "position": "absolute",
-            "cornerRadius": "20px",
-            "offsetTop": "18px",
-            "backgroundColor": "#ff334b",
-            "offsetStart": "18px",
-            "height": "25px",
-            "width": "53px"
           }
         ],
         "paddingAll": "0px"
@@ -283,11 +154,14 @@ def handle_message(event):
         "contents": [
           {
             "type": "image",
-            "url": "https://scontent.ftpe7-2.fna.fbcdn.net/v/t39.30808-6/289048160_1191688368244635_4757375885061924160_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=lqIHo-HxNZoAX_9WPVI&_nc_ht=scontent.ftpe7-2.fna&oh=00_AT8phs8QcRHuAfxdAzRxz-_nko5-YAVxLNqCtXpRR2dRQw&oe=634F811F",
+            "url": "https://images.pexels.com/photos/2249248/pexels-photo-2249248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "size": "full",
             "aspectMode": "cover",
             "aspectRatio": "2:3",
-            "gravity": "top"
+            "gravity": "bottom",
+            "align": "end",
+            "position": "absolute",
+            "offsetStart": "none"
           },
           {
             "type": "box",
@@ -299,7 +173,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "小美",
+                    "text": "Nearby thrift shops",
                     "size": "xl",
                     "color": "#ffffff",
                     "weight": "bold"
@@ -321,9 +195,13 @@ def handle_message(event):
                         "type": "filler"
                       },
                       {
+                        "type": "icon",
+                        "url": "https://cdn-icons-png.flaticon.com/512/126/126122.png"
+                      },
+                      {
                         "type": "text",
-                        "text": "Link",
-                        "color": "#ffffff",
+                        "text": "Go",
+                        "color": "#000000",
                         "flex": 0,
                         "offsetTop": "-2px"
                       },
@@ -342,42 +220,16 @@ def handle_message(event):
                 "spacing": "sm",
                 "borderColor": "#ffffff",
                 "margin": "xxl",
-                "height": "40px",
-                "action": {
-                  "type": "uri",
-                  "label": "action",
-                  "uri": "https://www.facebook.com/joanna.hsueh.58"
-                }
+                "height": "40px"
               }
             ],
             "position": "absolute",
             "offsetBottom": "0px",
             "offsetStart": "0px",
             "offsetEnd": "0px",
-            "backgroundColor": "#03303Acc",
+            "backgroundColor": "#9C8E7Ecc",
             "paddingAll": "20px",
             "paddingTop": "18px"
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "text",
-                "text": "SALE",
-                "color": "#ffffff",
-                "align": "center",
-                "size": "xs",
-                "offsetTop": "3px"
-              }
-            ],
-            "position": "absolute",
-            "cornerRadius": "20px",
-            "offsetTop": "18px",
-            "backgroundColor": "#ff334b",
-            "offsetStart": "18px",
-            "height": "25px",
-            "width": "53px"
           }
         ],
         "paddingAll": "0px"
@@ -391,11 +243,14 @@ def handle_message(event):
         "contents": [
           {
             "type": "image",
-            "url": "https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-1/300885875_1789148151436951_1144154933574846084_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=7206a8&_nc_ohc=TYAPtcW8n2UAX_1Sl71&_nc_ht=scontent.ftpe7-1.fna&oh=00_AT9C8yccogBniz4d8kGYysguWJSp9QyeLZReFlWFI2YedQ&oe=63505E9B",
+            "url": "https://images.pexels.com/photos/3873488/pexels-photo-3873488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "size": "full",
             "aspectMode": "cover",
             "aspectRatio": "2:3",
-            "gravity": "top"
+            "gravity": "bottom",
+            "align": "start",
+            "position": "absolute",
+            "offsetStart": "none"
           },
           {
             "type": "box",
@@ -407,7 +262,7 @@ def handle_message(event):
                 "contents": [
                   {
                     "type": "text",
-                    "text": "大帥",
+                    "text": "Rewards",
                     "size": "xl",
                     "color": "#ffffff",
                     "weight": "bold"
@@ -429,9 +284,13 @@ def handle_message(event):
                         "type": "filler"
                       },
                       {
+                        "type": "icon",
+                        "url": "https://cdn-icons-png.flaticon.com/512/548/548427.png"
+                      },
+                      {
                         "type": "text",
-                        "text": "Link",
-                        "color": "#ffffff",
+                        "text": "Go",
+                        "color": "#000000",
                         "flex": 0,
                         "offsetTop": "-2px"
                       },
@@ -450,150 +309,16 @@ def handle_message(event):
                 "spacing": "sm",
                 "borderColor": "#ffffff",
                 "margin": "xxl",
-                "height": "40px",
-                "action": {
-                  "type": "uri",
-                  "label": "action",
-                  "uri": "https://www.facebook.com/profile.php?id=100010253504873"
-                }
+                "height": "40px"
               }
             ],
             "position": "absolute",
             "offsetBottom": "0px",
             "offsetStart": "0px",
             "offsetEnd": "0px",
-            "backgroundColor": "#03303Acc",
+            "backgroundColor": "#9C8E7Ecc",
             "paddingAll": "20px",
             "paddingTop": "18px"
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "text",
-                "text": "SALE",
-                "color": "#ffffff",
-                "align": "center",
-                "size": "xs",
-                "offsetTop": "3px"
-              }
-            ],
-            "position": "absolute",
-            "cornerRadius": "20px",
-            "offsetTop": "18px",
-            "backgroundColor": "#ff334b",
-            "offsetStart": "18px",
-            "height": "25px",
-            "width": "53px"
-          }
-        ],
-        "paddingAll": "0px"
-      }
-    },
-    {
-      "type": "bubble",
-      "body": {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "image",
-            "url": "https://scontent.ftpe7-2.fna.fbcdn.net/v/t39.30808-6/305461448_5951747174852781_2192462885978776851_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=oPqJGEpRKqUAX9OOKvJ&_nc_ht=scontent.ftpe7-2.fna&oh=00_AT_JmpTMhfTGqZzQNw4Y3T5nwiqbNI9uWSSrnAUVFfbKqQ&oe=634F80ED",
-            "size": "full",
-            "aspectMode": "cover",
-            "aspectRatio": "2:3",
-            "gravity": "top"
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                  {
-                    "type": "text",
-                    "text": "男人",
-                    "size": "xl",
-                    "color": "#ffffff",
-                    "weight": "bold"
-                  }
-                ]
-              },
-              {
-                "type": "box",
-                "layout": "vertical",
-                "contents": [
-                  {
-                    "type": "filler"
-                  },
-                  {
-                    "type": "box",
-                    "layout": "baseline",
-                    "contents": [
-                      {
-                        "type": "filler"
-                      },
-                      {
-                        "type": "text",
-                        "text": "Link",
-                        "color": "#ffffff",
-                        "flex": 0,
-                        "offsetTop": "-2px"
-                      },
-                      {
-                        "type": "filler"
-                      }
-                    ],
-                    "spacing": "sm"
-                  },
-                  {
-                    "type": "filler"
-                  }
-                ],
-                "borderWidth": "1px",
-                "cornerRadius": "4px",
-                "spacing": "sm",
-                "borderColor": "#ffffff",
-                "margin": "xxl",
-                "height": "40px",
-                "action": {
-                  "type": "uri",
-                  "label": "action",
-                  "uri": "https://www.facebook.com/profile.php?id=100000526722120"
-                }
-              }
-            ],
-            "position": "absolute",
-            "offsetBottom": "0px",
-            "offsetStart": "0px",
-            "offsetEnd": "0px",
-            "backgroundColor": "#03303Acc",
-            "paddingAll": "20px",
-            "paddingTop": "18px"
-          },
-          {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
-                "type": "text",
-                "text": "SALE",
-                "color": "#ffffff",
-                "align": "center",
-                "size": "xs",
-                "offsetTop": "3px"
-              }
-            ],
-            "position": "absolute",
-            "cornerRadius": "20px",
-            "offsetTop": "18px",
-            "backgroundColor": "#ff334b",
-            "offsetStart": "18px",
-            "height": "25px",
-            "width": "53px"
           }
         ],
         "paddingAll": "0px"
@@ -604,7 +329,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, flex_message)
     else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('無法辨識'))
 #主程式
 import os
 if __name__ == "__main__":
